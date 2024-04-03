@@ -1,0 +1,5 @@
+@if(topMangaResponse$ | async; as result) {
+  @for (manga of result.trending["7"]; track manga.slug) {
+    <a [routerLink]="'app/manga/' + manga.slug">{{manga.title}}</a>
+  }
+}
